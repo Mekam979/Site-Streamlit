@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction App</title>
+</head>
+<body>
+    <h2>pridiction</h2>
+    <form method="post">
+        Credit Score: <input type="number" name="CreditScore" required><br>
+        Geography:
+        <select name="Geography" required>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="Spain">Spain</option>
+        </select><br>
+        Gender:
+        <select name="Gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br>
+        Age: <input type="number" name="Age" required><br>
+        Tenure: <input type="number" name="Tenure" required><br>
+        Balance: <input type="number" name="Balance" step="any" required><br>
+        Number of Products: <input type="number" name="NumOfProducts" required><br>
+        Has Credit Card:
+        <select name="HasCrCard" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br>
+        Is Active Member:
+        <select name="IsActiveMember" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br>
+        Estimated Salary: <input type="number" name="EstimatedSalary" step="any" required><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+    <p>{{ prediction }}</p>
+    {% endif %}
+</body>
+</html>
